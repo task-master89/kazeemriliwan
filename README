@@ -1,0 +1,180 @@
+# Profile Card — Static Frontend Component
+
+Short name: Profile Card  
+Repository: (https://github.com/task-master89/kazeemriliwan.git)
+
+## Table of contents
+
+- Project overview
+- Motivation & purpose
+- Project status
+- Features
+- Files and project structure
+- Design & accessibility notes
+- Installation (Windows) and local development
+- Running and previewing
+- Testing & validation
+- Known issues and recommendations
+- Contributing
+- Appendix: checklist for submission
+
+---
+
+## Project overview
+
+This is a small, static frontend project that implements a responsive profile card. The component displays a profile image, name, short personal details, social links and sections such as hobbies and dislikes. A small client-side script updates the displayed current time.
+
+The project is intentionally lightweight and framework-agnostic: it uses plain HTML, CSS and vanilla JavaScript so it can be easily reviewed, extended, or embedded into other pages.
+
+---
+
+## Motivation & purpose
+
+- Provide a clear, single-component demonstration of structure, styling, and small interactive behavior.
+- Use modern CSS practices (flexbox, responsive layout) and semantic HTML.
+- Provide a reference project for frontend assessments and portfolio submissions.
+
+---
+
+## Project status
+
+- Core UI implemented (HTML + CSS).
+- Small JavaScript to update the current time live.
+- Basic responsiveness included.
+- Accessibility and semantics considered but may require further improvement for full WCAG compliance.
+
+---
+
+## Features
+
+- Responsive profile card layout with avatar, personal details and list sections.
+- Social links styled and accessible via anchor elements.
+- Live current time display updated from client-side JavaScript.
+- Clean, minimal CSS with scoped classes to make the component reusable.
+- Lightweight: no external dependencies required to run locally.
+
+---
+
+## Files and project structure
+
+Root of the project (important files):
+
+- index.html — main HTML markup containing the profile card.
+- style.css — stylesheet (present in repository; controls layout and visual design).
+- script.js — JavaScript that updates the current time and any interactive behaviors.
+- action.js — duplicate/alternative script; consider consolidating or removing duplicates to avoid conflicts.
+- kazeem-img.png (or similar) — profile image used by the avatar element.
+- README.md — this file (detailed project documentation).
+
+Example tree:
+hng/
+├─ index.html
+├─ style.css
+├─ script.js
+├─ action.js
+├─ kazeem-img.png
+└─ README.md
+
+If your repo contains additional files, update this section to reflect the exact structure.
+
+---
+
+## Design & accessibility notes
+
+- Semantic elements (section, header, nav, ul/li) should be preferred in markup for better screen-reader support.
+- Use descriptive alt attributes for images (e.g., `alt="Kazeem profile photo"`).
+- Colors and contrast: ensure color choices meet WCAG AA contrast ratios for text on background.
+- Keyboard navigation: ensure all interactive elements (links, buttons) are focusable and usable with keyboard only.
+- Consider adding aria-labels or roles where semantics are unclear.
+
+---
+
+## Installation (Windows) and local development
+
+No build step or package manager required. To run the project locally you only need a browser and an HTTP server (recommended) or you can open index.html directly.
+
+Recommended options (Windows):
+
+1. Using Visual Studio Code Live Server extension:
+
+- Open the project folder in VS Code.
+- Install "Live Server" extension if not installed.
+- Right-click index.html -> "Open with Live Server" or click "Go Live".
+- The page opens in the browser and reloads on file changes.
+
+2. Opening the file directly:
+
+- Double-click index.html or open in browser. Note: some browsers restrict local JS/asset access when opened as file://; using an HTTP server avoids these problems.
+
+---
+
+## Running and previewing
+
+- After serving, the profile card is viewable at the root path (index.html).
+- If the page uses a script to update the time, verify script.js/action.js are loaded once (avoid duplicate functions with the same name).
+- Use browser dev tools (F12) to inspect DOM, network resources, and console for errors.
+
+---
+
+## Testing & validation
+
+- HTML validation: https://validator.w3.org
+- CSS validation: https://jigsaw.w3.org/css-validator
+- Basic manual tests:
+  - Resize viewport to mobile, tablet, and desktop widths and verify layout and readability.
+  - Keyboard-only navigation (Tab through elements).
+  - Screen reader check (NVDA / VoiceOver) for semantics and alt text.
+  - Link checks: verify external links open or have appropriate targets.
+
+Optional automated approaches:
+
+- Add unit tests for any significant JavaScript functions (e.g., time formatting) using Jest or similar. This project currently has no test harness; if required, scaffold a small Node project and add tests.
+
+---
+
+## Customization guide
+
+- Changing theme colors:
+  - Edit `style.css` color values (primary link color `#0077ff` used in anchors).
+- Changing avatar:
+  - Replace `kazeem-img.png` and ensure the filename matches the img src in index.html.
+- Adding more details:
+  - Append additional list items to the hobbies/dislikes lists in index.html.
+- Consolidating scripts:
+  - Move all time/update logic into one JS file and reference only that file in index.html.
+
+Example: to change anchor color in style.css:
+
+```css
+a {
+  color: #1a73e8;
+}
+a:hover {
+  color: #0b3558;
+}
+```
+
+Known issues and recommendations:
+Duplicate JavaScript files (script.js and action.js) may cause name collisions — consolidate.
+The CSS file includes a commented media-query block; consider adjusting and enabling it for improved wide-screen layouts.
+Some class names and id usage may be simplified to improve reusability and clarity.
+Consider adding unit tests for JavaScript utility functions if the project grows.
+Contributing
+
+Coding standards:
+Use semantic HTML and accessible attributes where applicable.
+Keep CSS modular and avoid global style leakage.
+Keep JavaScript small and declarative; avoid inline scripts in markup where feasible.
+License
+This project is permissive. Use, modify and distribute freely. If a formal license is required, consider adding an MIT License file.
+
+Appendix: submission checklist:
+index.html present and valid
+style.css present and linked correctly
+script.js (single script) present and not duplicated
+Image assets present with descriptive alt attributes
+README.md (this file) included and complete
+Project runs locally using python -m http.server or Live Server
+Accessibility checks passed for basic keyboard and screen reader usage
+Screenshot(s) added (optional but recommended)
+Zip or push repository as instructed by the submission guidelines
