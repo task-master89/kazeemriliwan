@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile Card - Frontend Wizards</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=BBH+Sans+Bogle&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <article data-testid="test-profile-card" class="profile-card">
+      <header class="header">
+        <img
+          src="kazeem-img.png"
+          alt="Profile picture of Kazeem Riliwan"
+          data-testid="test-user-avatar"
+          class="kazeem-image"
+        />
+
+        <h2 data-testid="test-user-name">KAZEEM RILIWAN OLAMILEKAN</h2>
+        <p data-testid="test-user-bio" class="personal-details">
+          Passionate frontend developer who loves building clean, responsive,
+          and accessible web interfaces.
+        </p>
+      </header>
+
+      <p>
+        Current time (ms):
+        <span data-testid="test-user-time" id="current-time"></span>
+      </p>
+
+      <div class="about">
+        <section class="hobbies-container">
+          <h3 class="hobbies-h3">Hobbies</h3>
+          <ul data-testid="test-user-hobbies">
+            <li>Coding</li>
+            <li>Problem-Solving</li>
+            <li>Football</li>
+          </ul>
+        </section>
+
+        <section class="dislikes-container">
+          <h3 class="dislikes-h3">Dislikes</h3>
+          <ul data-testid="test-user-dislikes">
+            <li>Slow internet</li>
+            <li>Messy code</li>
+            <li>Procrastination</li>
+          </ul>
+        </section>
+      </div>
+
+      <footer data-testid="test-user-social-links" class="social-links">
+        <ul class="social-links-ul">
+          <li>
+            <a
+              href="https://x.com/task_master89?t=PJ31PnsXq0oPMH4tqtXAGQ&s=09"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-testid="test-user-social-twitter"
+              >Twitter</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://github.com/task-master89"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-testid="test-user-social-github"
+              >GitHub</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/kazeem-riliwan-6ab103320?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-testid="test-user-social-linkedin"
+              >LinkedIn</a
+            >
+          </li>
+        </ul>
+      </footer>
+    </article>
+
+    <script src="script.js"></script>
+  </body>
+</html>

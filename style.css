@@ -1,0 +1,109 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body,
+html {
+  overflow-x: hidden;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-family: "inter", sans-serif;
+  justify-items: center;
+}
+.kazeem-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 200px;
+  padding-bottom: 10px;
+  justify-self: center;
+  display: block;
+}
+.header h2 {
+  text-align: center;
+}
+.header {
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+  width: 100%;
+  border-radius: 8px;
+}
+.profile-card {
+  background-color: rgba(50, 100, 300, 0.1);
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 90%;
+  transition: all 0.3s ease;
+  padding: 2rem;
+}
+.social-links ul,
+.dislikes-container ul,
+.hobbies-container ul {
+  list-style: none;
+}
+.personal-details {
+  font-size: 15px;
+  font-weight: bold;
+  padding-top: 10px;
+}
+#current-time {
+  text-transform: uppercase;
+  font-size: 24px;
+}
+.about {
+  display: flex;
+  justify-content: space-between;
+  align-items: first baseline;
+  padding-bottom: 30px;
+}
+.dislikes-h3,
+.hobbies-h3 {
+  padding-top: 20px;
+  font-size: 24px;
+}
+a {
+  text-decoration: none;
+  color: #0077ff;
+}
+.social-links-ul {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  padding-bottom: 30px;
+}
+
+a:focus,
+a:hover {
+  text-decoration: underline;
+  color: #000;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Responsive Layout */
+/* @media (min-width: 768px) {
+  .profile-card {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    max-width: 700px;
+    gap: 2rem;
+  }
+
+  .avatar {
+    flex: 1;
+    text-align: center;
+  }
+
+  .profile-card header,
+  .profile-card p,
+  .profile-card nav,
+  .profile-card section {
+    flex: 2;
+  }
+} */
